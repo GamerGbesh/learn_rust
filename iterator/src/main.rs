@@ -11,6 +11,7 @@ struct Shoe{
     style: String,
 }
 
+/// This function filters out a vector of `Shoe` that are equal to a specific `shoe_size`
 fn shoes_in_my_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
     shoes.into_iter().filter(|x| x.size == shoe_size).collect()
 }
