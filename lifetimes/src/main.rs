@@ -43,9 +43,10 @@ fn do_first<'a>(x: &'a str, _y: &str) -> &'a str { // Life time is going to be s
     x
 }
 
-fn ret_ref<'a>(x: &str, y: &str) -> &'a str {
+fn ret_ref<'a>(x: &'a str, y: &str) -> &'a str {
     let result = String::from("Really long string");
-    result.as_str() // This reference will fail because at the end of the function result would be out of scope
+    // result.as_str() // This reference will fail because at the end of the function result would be out of scope
+    x
 }
 
 fn ret_ref_correct(x: &str, y: &str) -> String {
